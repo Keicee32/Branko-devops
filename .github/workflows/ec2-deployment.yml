@@ -1,0 +1,28 @@
+name: EC2 Code Deployment
+on: 
+  push:
+    branches:
+      - ec2-terraform
+jobs:
+  deploy-code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get Code
+        uses: actions/checkout@v4
+        with:
+          repository: 'itsowwy/node-projects/urlShortener'
+          ref: 'main'
+      - name: Install Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Cache Dependencies
+        uses: actions/cache@v3    
+      - name: Install Packages
+        run: npm ci
+      - name: SSH into server
+        uses: appleoy/ssh-action@v1
+        with:
+          host:
+          username:
+          key: 
