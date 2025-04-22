@@ -20,9 +20,9 @@ jobs:
         uses: actions/cache@v3    
       - name: Install Packages
         run: npm ci
-      - name: SSH into server
-        uses: appleoy/ssh-action@v1
-        with:
-          host:
-          username:
-          key: 
+      # - name: SSH into server
+      #   uses: appleoy/ssh-action@v1
+      #   with:
+      #     host:
+      #     username:
+      #     key: 
