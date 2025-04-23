@@ -20,7 +20,7 @@ jobs:
       - name: Cache Dependencies
         uses: actions/cache@v3   
       - name: List Directories and files
-        run: ls -al 
+        run: ls -al && cd urlShortener
       - name: Install Packages
         run: npm ci
       # - name: SSH into server
