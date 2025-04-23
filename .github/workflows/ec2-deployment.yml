@@ -18,7 +18,9 @@ jobs:
         with:
           node-version: 18
       - name: Cache Dependencies
-        uses: actions/cache@v3    
+        uses: actions/cache@v3   
+      - name: List Directories and files
+        run: ls -al 
       - name: Install Packages
         run: npm ci
       # - name: SSH into server
