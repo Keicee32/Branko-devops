@@ -22,7 +22,7 @@ jobs:
       - name: List Directories and files
         run: ls -al && cd urlShortener
       - name: Install Packages
-        run: npm ci
+        run: npm install
       # - name: SSH into server
       #   uses: appleoy/ssh-action@v1
       #   with:
